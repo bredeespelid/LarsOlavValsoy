@@ -2,9 +2,62 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
+    <!-- Viewport Meta Tag for Responsivitet -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lars-Olav Tunheim Valsø - Naturlege produkt frå hjarta av Valsøyfjord</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Lars-Olav Tunheim Valsø - Sauskinn, Ullgarn & Handverk frå Valsøyfjord</title>
+    <meta name="description" content="Oppdag naturlege produkt og tradisjonelt handverk frå Lars-Olav Tunheim Valsø i Valsøyfjord. Kjøp unike sauskinn, heimelaga fårepølser, kvalitetsullgarn og lammekjøt. Tilbyr også snikkararbeid og flygelkonsertar.">
+    <!-- Nøkkelord (mindre viktig for Google nå, men kan inkluderes) -->
+    <meta name="keywords" content="Lars-Olav Tunheim Valsø, Valsøyfjord, sauskinn, fårepølse, ullgarn, handverk, snikkar, lammekjøt, naturlege produkt, flygelkonsert, trønderlån">
+
+    <!-- Open Graph / Facebook Meta Tags (Valgfritt, men bra for deling) -->
+    <meta property="og:title" content="Lars-Olav Tunheim Valsø - Naturlege produkt frå Valsøyfjord">
+    <meta property="og:description" content="Oppdag unike sauskinn, heimelaga fårepølser, kvalitetsullgarn og meir frå hjarta av Valsøyfjord.">
+    <meta property="og:image" content="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep.jpeg?raw=true">
+    <meta property="og:url" content="[Sett inn URL til nettsiden din her]">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags (Valgfritt) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lars-Olav Tunheim Valsø - Naturlege produkt frå Valsøyfjord">
+    <meta name="twitter:description" content="Oppdag unike sauskinn, heimelaga fårepølser, kvalitetsullgarn og meir frå hjarta av Valsøyfjord.">
+    <meta name="twitter:image" content="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep.jpeg?raw=true">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Strukturert Data (Schema.org for LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Lars-Olav Tunheim Valsø",
+      "description": "Tilbyr naturlege produkt som sauskinn, fårepølser, ullgarn, lammekjøt, samt handverkstenester (snikkararbeid) og flygelkonsertar i Valsøyfjord.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Valsøyvegen 100",
+        "addressLocality": "Valsøyfjord",
+        "postalCode": "6687",
+        "addressCountry": "NO"
+      },
+      "telephone": "+4790941191",
+      "image": "https://github.com/bredeespelid/LarsOlavValsoy/blob/main/LarsOlavBilde.jpeg?raw=true",
+      "url": "[Sett inn URL til nettsiden din her]",
+       "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Sauskinn"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Heimelaga Fårepølser"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Ullgarn"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Lammekjøt"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Snikkarverksemd"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Handverkstenester Svalbard"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Event", "name": "Flygelkonsertar"}}
+       ]
+    }
+    </script>
+
     <style>
+        /* Grunnleggende stiler */
         body {
             font-family: 'Merriweather', serif;
             margin: 0;
@@ -18,7 +71,7 @@
 
         .container {
             max-width: 960px;
-            margin: 60px auto;
+            margin: 60px auto; /* Økt margin topp/bunn på større skjermer */
             padding: 40px;
             background-color: #fff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -35,7 +88,7 @@
         header h1 {
             color: #5a875a;
             margin-bottom: 10px;
-            font-size: 3.2em;
+            font-size: 2.8em; /* Justert litt ned for bedre balanse */
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -46,6 +99,7 @@
             font-size: 1.1em;
         }
 
+        /* Hero bilde */
         .hero-image {
             width: 100%;
             border-radius: 12px;
@@ -55,10 +109,10 @@
         }
 
         .hero-image img {
-            width: 100%;
+            width: 100%; /* Sikrer at bildet skalerer */
+            height: auto; /* Beholder proporsjoner */
             display: block;
-            object-fit: cover;
-            height: auto;
+            object-fit: cover; /* Dekker containeren */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -66,12 +120,14 @@
             transform: scale(1.03);
         }
 
+        /* Seksjon om lidenskap */
         .passion-section {
             padding: 40px 20px;
             margin-bottom: 40px;
             background-color: #f9f9f9;
             border-radius: 12px;
             display: grid;
+            /* Starter med 2 kolonner på større skjermer */
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             align-items: center;
@@ -85,17 +141,18 @@
 
         .passion-section .image-container img {
             width: 100%;
+            height: auto; /* Beholder proporsjoner */
             display: block;
-            height: auto;
             object-fit: cover;
         }
 
         .passion-section .text-container {
-            padding: 20px;
+            padding: 0; /* Fjerner unødvendig padding her, kontrolleres av grid gap */
         }
 
         .passion-section h2 {
             color: #5a875a;
+            margin-top: 0; /* Fjerner toppmargin hvis det er første element */
             margin-bottom: 15px;
             font-size: 2em;
         }
@@ -105,6 +162,7 @@
             line-height: 1.7;
         }
 
+        /* Seksjon om Valsøy */
         .about-valsøy {
             padding: 0 20px 40px 20px;
             color: #555;
@@ -120,6 +178,7 @@
             border-bottom: 1px dashed #ccc;
         }
 
+        /* Seksjon om tilbud */
         .offerings {
             margin-bottom: 50px;
             padding: 0 20px;
@@ -139,6 +198,7 @@
             list-style: none;
             padding: 0;
             display: grid;
+            /* Responsiv grid som tilpasser kolonner */
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
@@ -150,6 +210,9 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
             text-align: center;
             transition: transform 0.2s ease-in-out;
+            display: flex; /* Bruker flexbox for bedre innholdsjustering */
+            flex-direction: column; /* Stabler elementer vertikalt */
+            justify-content: flex-start; /* Starter innhold fra toppen */
         }
 
         .offerings ul li:hover {
@@ -166,8 +229,10 @@
         .offerings ul li p {
             color: #666;
             font-size: 1em;
+            flex-grow: 1; /* Lar p ta opp tilgjengelig plass, justerer kortene likt */
         }
 
+        /* Kontaktseksjon */
         .contact-info {
             padding: 30px;
             background-color: #f0f8f0;
@@ -189,6 +254,11 @@
             font-size: 1.1em;
         }
 
+        .contact-info address { /* Stil for adresse-taggen */
+            font-style: normal; /* Fjerner standard kursiv */
+            line-height: 1.7;
+        }
+
         .contact-info a {
             color: #5a875a;
             text-decoration: none;
@@ -200,90 +270,228 @@
             color: #446a44;
         }
 
+        /* Footer */
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 30px 20px; /* Lagt til sidepadding */
             font-size: 0.95em;
             color: #777;
             border-top: 1px solid #e0e0e0;
+            margin-top: 40px; /* Litt luft før footeren */
         }
+
+        /* ----- Media Queries for Responsivitet ----- */
+
+        /* Tablet og mindre (f.eks. iPad portrett) */
+        @media (max-width: 768px) {
+            .container {
+                margin: 40px auto;
+                padding: 30px;
+                border-radius: 8px;
+            }
+
+            header h1 {
+                font-size: 2.4em;
+            }
+
+            .passion-section {
+                /* Endrer til én kolonne */
+                grid-template-columns: 1fr;
+                gap: 20px; /* Mindre mellomrom */
+                padding: 30px 15px;
+            }
+
+            /* Bytt rekkefølge på mobil om ønskelig (f.eks. bilde øverst) */
+            .passion-section .image-container {
+                 grid-row: 1; /* Plasserer bilde først i grid */
+            }
+            .passion-section .text-container {
+                 grid-row: 2; /* Plasserer tekst etter bilde */
+            }
+
+            .passion-section h2,
+            .about-valsøy h2,
+            .offerings h2,
+            .contact-info h2 {
+                font-size: 1.8em;
+            }
+
+            .offerings h2 {
+                font-size: 2em; /* Litt større for hovedtilbud */
+            }
+
+            .offerings ul {
+                 /* Justerer min bredde for grid items på mindre skjermer om nødvendig */
+                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                 gap: 20px;
+            }
+
+            .offerings ul li {
+                padding: 20px;
+            }
+
+            .contact-info {
+                padding: 25px;
+            }
+        }
+
+        /* Smarttelefon (f.eks. iPhone) */
+        @media (max-width: 480px) {
+            body {
+                line-height: 1.6; /* Juster linjehøyde for små skjermer */
+            }
+            .container {
+                margin: 20px auto;
+                padding: 20px 15px; /* Mindre padding på sidene */
+                border-radius: 0; /* Kan fjerne rundede hjørner på helt små skjermer */
+                box-shadow: none; /* Kan fjerne skygge */
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+
+             .passion-section {
+                padding: 20px 10px;
+             }
+
+            .passion-section h2,
+            .about-valsøy h2,
+            .offerings h2,
+            .contact-info h2 {
+                font-size: 1.6em;
+            }
+
+            .offerings h2 {
+                font-size: 1.8em;
+            }
+
+            .offerings ul {
+                /* Sikrer én kolonne på de minste skjermene */
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+             .offerings ul li h3 {
+                font-size: 1.2em;
+             }
+             .offerings ul li p {
+                font-size: 0.95em;
+            }
+
+
+            .contact-info {
+                padding: 20px;
+            }
+            .contact-info p {
+                font-size: 1em;
+            }
+
+            footer {
+                 padding: 20px 15px;
+                 font-size: 0.9em;
+            }
+        }
+
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Container for å sentrere og begrense bredden -->
     <div class="container">
+
         <header>
             <h1>Lars-Olav Tunheim Valsø</h1>
             <p>Naturlege produkt og gamle handverkstenester frå hjarta av Valsøyfjord.</p>
         </header>
 
-        <div class="hero-image">
-            <img src="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep.jpeg?raw=true" alt="Ei roleg flokk med sau på dei frodige beitemarkane i Valsøyfjord" width="800" height="200">
-        </div>
+        <!-- Semantisk tag for hovedinnhold -->
+        <main>
 
-        <section class="passion-section">
-            <div class="text-container">
-                <h2>Med hug og hjarta for naturen</h2>
-                <p>For meg handlar det om meir enn berre ting; det er ein måte å leve på som heng i hop med djup respekt for naturen og eit brennande engasjement for det eg held på med. Frå dei fyrste vårdagane når lamma sprett ut på grøne beiter, til hausten når ulla vert henta inn og kjøtet vert foredla, er eg tett på heile prosessen. Eg trur på gode, naturlege råvarer og måtar å gjere ting på som held i lengda, og som sikrar kvalitet i alt eg gjer.</p>
-                <p>Dette engasjementet ser du att i kvart sauskinn, kvar fårepølse og kvart einaste nøste med ullgarn du finn her. Det er eit lite stykke av Valsøyfjord, laga med omtanke og kjærleik til faget.</p>
+            <div class="hero-image">
+                <!-- Beskrivende alt-tekst for SEO og tilgjengelighet -->
+                <img src="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep.jpeg?raw=true" alt="Flokk med sauer som beiter på frodige, grønne marker i Valsøyfjord" width="960" height="auto">
+                 <!-- width/height attributter hjelper nettleseren med å sette av plass (bra for CLS), men CSS styrer den faktiske størrelsen -->
             </div>
-            <div class="image-container">
-                <img src="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/LarsOlavBilde.jpeg?raw=true" alt="Bilete av Lars Olav Tunheim Valsø">
-            </div>
-        </section>
 
-        <section class="about-valsøy">
-            <h2>Eit liv i takt med naturen</h2>
-            <p>I den idylliske bygda Valsøyfjord, der fjell møter fjord og grøne beiter strekkjer seg så langt auge kan sjå, finn du verksemda mi. Her, i dette naturskjønne landskapet, beiter sauene mine fritt og nyt godt av den friske lufta og det næringsrike graset. Dette nære forholdet til naturen og dyra er sjølve grunnlaget for kvaliteten på produkta eg tilbyr.</p>
-            <p>Kvar dag fylgjer eg årstidene, frå lamma sine leikne vårdagar til hausten si innhausting. Denne syklusen speglar seg i alt eg gjer, anten det er foredlinga av det mjuke saueSkinnet, produksjonen av smakfulle fårepølser, eller spinning av den fine ulla til garn. Også i snikkarverkstaden og under konsertane mine i den tradisjonsrike Trønderlåna, ber eg med meg ein djup respekt for handverk og tradisjon.</p>
-        </section>
+            <section class="passion-section" aria-labelledby="passion-heading">
+                <div class="text-container">
+                    <h2 id="passion-heading">Med hug og hjarta for naturen</h2>
+                    <p>For meg handlar det om meir enn berre ting; det er ein måte å leve på som heng i hop med djup respekt for naturen og eit brennande engasjement for det eg held på med. Frå dei fyrste vårdagane når lamma sprett ut på grøne beiter, til hausten når ulla vert henta inn og kjøtet vert foredla, er eg tett på heile prosessen. Eg trur på gode, naturlege råvarer og måtar å gjere ting på som held i lengda, og som sikrar kvalitet i alt eg gjer.</p>
+                    <p>Dette engasjementet ser du att i kvart sauskinn, kvar fårepølse og kvart einaste nøste med ullgarn du finn her. Det er eit lite stykke av Valsøyfjord, laga med omtanke og kjærleik til faget.</p>
+                </div>
+                <div class="image-container">
+                    <img src="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/LarsOlavBilde.jpeg?raw=true" alt="Portrettbilde av Lars Olav Tunheim Valsø utendørs">
+                </div>
+            </section>
 
-        <section class="offerings">
-            <h2>Det eg tilbyr</h2>
-            <ul>
-                <li>
-                    <h3>Sauskinn frå Valsøyfjord</h3>
-                    <p>Unike og naturleg mjuke sauskinn, eit resultat av godt dyrevelferd og klimaet her i fjorden. Perfekt for varme og komfort i heimen.</p>
-                </li>
-                <li>
-                    <h3>Heimelaga Fårepølser</h3>
-                    <p>Smakfulle fårepølser, laga etter gamle oppskrifter med kjøt frå eigne lam. Ei ekte smak av lokale råvarer.</p>
-                </li>
-                <li>
-                    <h3>Ullgarn av norsk kvalitet</h3>
-                    <p>Deilig ullgarn spunne frå den fine ulla til sauene mine. Ideelt for alle dine strikkeprosjekt, med ei mjukheit og varme som varer.</p>
-                </li>
-                <li>
-                    <h3>Snikkarverksemd med omtanke</h3>
-                    <p>Eg tilbyr ulike snikkararbeidstenester, frå små reparasjonar til større prosjekt. Kvalitet og gamalt handverk står i fokus.</p>
-                </li>
-                <li>
-                    <h3>Handverkstenester på Svalbard</h3>
-                    <p>Med erfaring frå utleige av handverkstenester på Svalbard, kan eg tilby unik kompetanse for prosjekt i arktiske strok.</p>
-                </li>
-                <li>
-                    <h3>Stemningsfulle Flygelkonsertar</h3>
-                    <p>Opplev intime flygelkonsertar i den historiske Trønderlåna. Eit møte mellom musikk og ei spesiell stemning.</p>
-                </li>
-                <li>
-                    <h3>Lammekjøt etter årstida</h3>
-                    <p>Nydelig lammekjøt av høg kvalitet, tilgjengeleg når det er sesong. Rett frå beite til ditt bord.</p>
-                </li>
-            </ul>
-        </section>
+            <section class="about-valsøy" aria-labelledby="about-heading">
+                <h2 id="about-heading">Eit liv i takt med naturen</h2>
+                <p>I den idylliske bygda Valsøyfjord, der fjell møter fjord og grøne beiter strekkjer seg så langt auge kan sjå, finn du verksemda mi. Her, i dette naturskjønne landskapet, beiter sauene mine fritt og nyt godt av den friske lufta og det næringsrike graset. Dette nære forholdet til naturen og dyra er sjølve grunnlaget for kvaliteten på produkta eg tilbyr.</p>
+                <p>Kvar dag fylgjer eg årstidene, frå lamma sine leikne vårdagar til hausten si innhausting. Denne syklusen speglar seg i alt eg gjer, anten det er foredlinga av det mjuke saueSkinnet, produksjonen av smakfulle fårepølser, eller spinning av den fine ulla til garn. Også i snikkarverkstaden og under konsertane mine i den tradisjonsrike Trønderlåna, ber eg med meg ein djup respekt for handverk og tradisjon.</p>
+            </section>
 
-        <section class="contact-info">
-            <h2>Ta kontakt</h2>
-            <p>Eg ser fram til å høyre frå deg!</p>
-            <p><strong>Namn:</strong> Lars Olav Tunheim Valsø</p>
-            <p><strong>Adresse:</strong> Valsøyvegen 100, 6687 VALSØYFJORD</p>
-            <p><strong>Telefon:</strong> <a href="tel:90941191">909 41 191</a></p>
-            <p>Du er hjarteleg velkomen til å ta kontakt om du er interessert i produkta eller tenestene mine.</p>
-        </section>
+            <section class="offerings" aria-labelledby="offerings-heading">
+                <h2 id="offerings-heading">Det eg tilbyr</h2>
+                <ul>
+                    <li>
+                        <h3>Sauskinn frå Valsøyfjord</h3>
+                        <p>Unike og naturleg mjuke sauskinn, eit resultat av godt dyrevelferd og klimaet her i fjorden. Perfekt for varme og komfort i heimen.</p>
+                    </li>
+                    <li>
+                        <h3>Heimelaga Fårepølser</h3>
+                        <p>Smakfulle fårepølser, laga etter gamle oppskrifter med kjøt frå eigne lam. Ei ekte smak av lokale råvarer.</p>
+                    </li>
+                    <li>
+                        <h3>Ullgarn av norsk kvalitet</h3>
+                        <p>Deilig ullgarn spunne frå den fine ulla til sauene mine. Ideelt for alle dine strikkeprosjekt, med ei mjukheit og varme som varer.</p>
+                    </li>
+                    <li>
+                        <h3>Snikkarverksemd med omtanke</h3>
+                        <p>Eg tilbyr ulike snikkararbeidstenester, frå små reparasjonar til større prosjekt. Kvalitet og gamalt handverk står i fokus.</p>
+                    </li>
+                    <li>
+                        <h3>Handverkstenester på Svalbard</h3>
+                        <p>Med erfaring frå utleige av handverkstenester på Svalbard, kan eg tilby unik kompetanse for prosjekt i arktiske strok.</p>
+                    </li>
+                    <li>
+                        <h3>Stemningsfulle Flygelkonsertar</h3>
+                        <p>Opplev intime flygelkonsertar i den historiske Trønderlåna. Eit møte mellom musikk og ei spesiell stemning.</p>
+                    </li>
+                    <li>
+                        <h3>Lammekjøt etter årstida</h3>
+                        <p>Nydelig lammekjøt av høg kvalitet, tilgjengeleg når det er sesong. Rett frå beite til ditt bord.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="contact-info" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Ta kontakt</h2>
+                 <!-- Bruk <address> for kontaktinfo -->
+                <address>
+                    <p>Eg ser fram til å høyre frå deg!</p>
+                    <p><strong>Namn:</strong> Lars Olav Tunheim Valsø</p>
+                    <p><strong>Adresse:</strong> Valsøyvegen 100, 6687 VALSØYFJORD</p>
+                    <p><strong>Telefon:</strong> <a href="tel:+4790941191">909 41 191</a></p>
+                     <!-- Merk: Brukte internasjonal format for tel: linken -->
+                </address>
+                <p>Du er hjarteleg velkomen til å ta kontakt om du er interessert i produkta eller tenestene mine.</p>
+            </section>
+
+        </main> <!-- Slutt på main content -->
 
         <footer>
-            <p>&copy; 2023 Lars-Olav Tunheim Valsø - Skapt med omtanke frå Valsøyfjord</p>
+            <p>© <span id="current-year"></span> Lars-Olav Tunheim Valsø - Skapt med omtanke frå Valsøyfjord</p>
         </footer>
-    </div>
+
+    </div> <!-- Slutt på container -->
+
+    <!-- Lite script for å oppdatere årstallet i footeren automatisk -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
