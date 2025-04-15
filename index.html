@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lars-Olav Tunheim Valsø - Sauskinn, Ullgarn & Handverk frå Valsøyfjord</title>
     <!-- **** SJEKK/OPPDATER beskrivelse med KORREKT adresse **** -->
-    <meta name="description" content="Oppdag naturlege produkt og tradisjonelt handverk frå Lars-Olav Tunheim Valsø i Valsøyfjord. Utforsk kartet for å se vår plassering.">
+    <meta name="description" content="Oppdag naturlege produkt og tradisjonelt handverk frå Lars-Olav Tunheim Valsø i Valsøyfjord (DIN_KORREKTE_GATEADRESSE). Utforsk kartet for å se vår plassering.">
      <!-- **** SJEKK/OPPDATER keywords med KORREKT adresse **** -->
-    <meta name="keywords" content="Lars-Olav Tunheim Valsø, Valsøyfjord, Valsøyvegen 100, kart, sauskinn, fårepølse, ullgarn, handverk, snikkar, lammekjøt, flygelkonsert, leaflet, openstreetmap">
+    <meta name="keywords" content="Lars-Olav Tunheim Valsø, Valsøyfjord, DIN_KORREKTE_GATEADRESSE, kart, sauskinn, fårepølse, ullgarn, handverk, snikkar, lammekjøt, flygelkonsert, leaflet, openstreetmap">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Lars-Olav Tunheim Valsø - Naturlege produkt frå Valsøyfjord">
     <!-- **** SJEKK/OPPDATER beskrivelse med KORREKT adresse **** -->
-    <meta property="og:description" content="Utforsk vår plassering i Valsøyfjord via vårt interaktive kart. Oppdag sauskinn, ullgarn og meir.">
+    <meta property="og:description" content="Utforsk vår plassering på DIN_KORREKTE_GATEADRESSE i Valsøyfjord via vårt interaktive kart. Oppdag sauskinn, ullgarn og meir.">
     <meta property="og:image" content="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep2.jpeg?raw=true">
     <meta property="og:url" content="[Sett inn URL til nettsiden din her]">
     <meta property="og:type" content="website">
@@ -21,8 +21,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lars-Olav Tunheim Valsø - Naturlege produkt frå Valsøyfjord">
      <!-- **** SJEKK/OPPDATER beskrivelse med KORREKT adresse **** -->
-    <meta name="twitter:description" content="Utforsk vår plassering i Valsøyfjord via vårt interaktive kart. Oppdag sauskinn, ullgarn og meir.">
-    <meta name="twitter:image" content="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep.jpeg?raw=true">
+    <meta name="twitter:description" content="Utforsk vår plassering på DIN_KORREKTE_GATEADRESSE i Valsøyfjord via vårt interaktive kart. Oppdag sauskinn, ullgarn og meir.">
+    <meta name="twitter:image" content="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep.jpeg?raw=true"> <!-- Kan være samme som og:image -->
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
       "address": {
         "@type": "PostalAddress",
          /* **** SJEKK/OPPDATER gateadresse her **** */
-        "streetAddress": Valsøyvegen 100,
+        "streetAddress": "DIN_KORREKTE_GATEADRESSE",
          /* **** SJEKK/OPPDATER sted her (hvis nødvendig) **** */
         "addressLocality": "Valsøyfjord",
          /* **** SJEKK/OPPDATER postnummer her (hvis nødvendig) **** */
@@ -51,8 +51,8 @@
       },
        "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "63.143098",  /* <-- OPPDATERT */
-            "longitude": "8.515674" /* <-- OPPDATERT */
+            "latitude": "63.143098",
+            "longitude": "8.515674"
         },
       "telephone": "+4790941191",
       "image": "https://github.com/bredeespelid/LarsOlavValsoy/blob/main/LarsOlavBilde.jpeg?raw=true",
@@ -70,15 +70,34 @@
     </script>
 
     <style>
-        /* --- CSS (Samme som før) --- */
         body { font-family: 'Merriweather', serif; margin: 0; padding: 0; background-color: #f8f8f8; color: #444; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .container { max-width: 960px; margin: 60px auto; padding: 40px; background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-radius: 12px; }
         header { text-align: center; padding-bottom: 30px; border-bottom: 2px solid #e0e0e0; margin-bottom: 40px; }
         header h1 { color: #5a875a; margin-bottom: 10px; font-size: 2.8em; font-weight: 700; letter-spacing: -0.5px; }
         header p { color: #777; font-style: italic; font-size: 1.1em; }
-        .hero-image { width: 100%; border-radius: 12px; margin-bottom: 40px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); }
-        .hero-image img { width: 100%; height: auto; display: block; object-fit: cover; transition: transform 0.3s ease-in-out; }
+
+        /* --- HERO BILDE MED MAKS HØYDE --- */
+        .hero-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            max-height: 450px; /* <-- BEGRENSER HØYDEN PÅ BILDETS CONTAINER */
+            display: flex; /* For å bruke align-items */
+            align-items: center; /* Sentrerer bildet vertikalt om det er lavere enn max-height */
+            background-color: #eee; /* Viser en bakgrunn mens bildet laster */
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%; /* Gjør at bildet prøver å fylle containerens høyde */
+            display: block;
+            object-fit: cover; /* VIKTIG: Dekker containeren, beskjærer for å passe */
+            transition: transform 0.3s ease-in-out;
+        }
         .hero-image:hover img { transform: scale(1.03); }
+        /* --- SLUTT HERO BILDE STIL --- */
+
         .passion-section { padding: 40px 20px; margin-bottom: 40px; background-color: #f9f9f9; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
         .passion-section .image-container { border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); }
         .passion-section .image-container img { width: 100%; height: auto; display: block; object-fit: cover; }
@@ -88,7 +107,7 @@
         .about-valsøy { padding: 0 20px 40px 20px; color: #555; }
         .about-valsøy h2 { color: #5a875a; margin-bottom: 25px; font-size: 2em; text-align: center; position: relative; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
 
-        .offerings { margin-bottom: 50px; padding: 0 20px; } /* Justert margin */
+        .offerings { margin-bottom: 40px; padding: 0 20px; } /* Redusert bunnmargin litt */
         .offerings h2 { color: #5a875a; margin-bottom: 25px; font-size: 2.4em; text-align: center; position: relative; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
         .offerings ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
         .offerings ul li { background-color: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); text-align: center; transition: transform 0.2s ease-in-out; display: flex; flex-direction: column; justify-content: flex-start; }
@@ -96,7 +115,7 @@
         .offerings ul li h3 { color: #444; margin-top: 0; margin-bottom: 10px; font-size: 1.4em; }
         .offerings ul li p { color: #666; font-size: 1em; flex-grow: 1; }
 
-        .leaflet-map-section { padding: 0 0 40px 0; margin-bottom: 40px; text-align: center; } /* Justert padding */
+        .leaflet-map-section { padding: 0 0 40px 0; margin-bottom: 40px; text-align: center; }
         .leaflet-map-section h2 { color: #5a875a; margin-bottom: 25px; font-size: 2.2em; position: relative; padding-bottom: 10px; border-bottom: 1px dashed #ccc; display: inline-block; }
         #leaflet-map { height: 450px; width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); margin-top: 20px; background-color: #e8e8e8; z-index: 1; }
         .leaflet-popup-content-wrapper { border-radius: 8px !important; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
@@ -120,10 +139,11 @@
         @media (max-width: 768px) {
             .container { margin: 40px auto; padding: 30px; border-radius: 8px; }
             header h1 { font-size: 2.4em; }
+            .hero-image { max-height: 350px; } /* Juster max-høyde for tablet */
             .passion-section { grid-template-columns: 1fr; gap: 20px; padding: 30px 15px; }
             .passion-section .image-container { grid-row: 1; }
             .passion-section .text-container { grid-row: 2; }
-            .passion-section h2, .about-valsøy h2, .offerings h2, .leaflet-map-section h2, .contact-info h2 { font-size: 1.8em; } /* Rekkefølge endret */
+            .passion-section h2, .about-valsøy h2, .offerings h2, .leaflet-map-section h2, .contact-info h2 { font-size: 1.8em; }
             .offerings h2 { font-size: 2em; }
             .offerings ul { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
             .offerings ul li { padding: 20px; }
@@ -135,8 +155,9 @@
             .container { margin: 20px auto; padding: 20px 15px; border-radius: 0; box-shadow: none; }
             header h1 { font-size: 2em; }
             header p { font-size: 1em; }
+             .hero-image { max-height: 280px; border-radius: 0; } /* Juster max-høyde for mobil */
             .passion-section { padding: 20px 10px; }
-            .passion-section h2, .about-valsøy h2, .offerings h2, .leaflet-map-section h2, .contact-info h2 { font-size: 1.6em; } /* Rekkefølge endret */
+            .passion-section h2, .about-valsøy h2, .offerings h2, .leaflet-map-section h2, .contact-info h2 { font-size: 1.6em; }
             .offerings h2 { font-size: 1.8em; }
             .offerings ul { grid-template-columns: 1fr; gap: 15px; }
             .offerings ul li h3 { font-size: 1.2em; }
@@ -159,6 +180,7 @@
         <main>
 
             <div class="hero-image">
+                <!-- Bruker fortsatt den originale bildelenken, men CSS begrenser høyden -->
                 <img src="https://github.com/bredeespelid/LarsOlavValsoy/blob/main/Sheep2.jpeg?raw=true" alt="Flokk med sauer som beiter på frodige, grønne marker i Valsøyfjord" width="960" height="auto">
             </div>
 
@@ -228,7 +250,7 @@
                     <p>Eg ser fram til å høyre frå deg!</p>
                     <p><strong>Namn:</strong> Lars Olav Tunheim Valsø</p>
                     <!-- **** SJEKK/OPPDATER gateadresse, postnummer og sted her **** -->
-                    <p><strong>Adresse:</strong> Valsøyvegen 100, 6687 VALSØYFJORD</p>
+                    <p><strong>Adresse:</strong> DIN_KORREKTE_GATEADRESSE, 6687 VALSØYFJORD</p>
                     <p><strong>Telefon:</strong> <a href="tel:+4790941191">909 41 191</a></p>
                 </address>
                 <p>Du er hjarteleg velkomen til å ta kontakt om du er interessert i produkta eller tenestene mine.</p>
@@ -258,10 +280,8 @@
             const mapElement = document.getElementById('leaflet-map');
             if (mapElement) {
                 try {
-                    /* **** KOORDINATER OPPDATERT **** */
                     const coordinates = [63.143098, 8.515674]; // [Latitude, Longitude]
-
-                    const zoomLevel = 14; // Juster etter behov
+                    const zoomLevel = 14;
 
                     const map = L.map('leaflet-map', {
                          center: coordinates,
@@ -270,7 +290,7 @@
                     });
 
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     }).addTo(map);
 
                     const marker = L.marker(coordinates, {
@@ -280,7 +300,7 @@
                      /* **** SJEKK/OPPDATER gateadresse, postnummer og sted i popupen her **** */
                     const popupContent = `
                         <h3>Lars-Olav Tunheim Valsø</h3>
-                        <p>Valsøyvegen 100<br>6687 VALSØYFJORD</p>
+                        <p>DIN_KORREKTE_GATEADRESSE<br>6687 VALSØYFJORD</p>
                     `;
 
                     marker.bindPopup(popupContent);
